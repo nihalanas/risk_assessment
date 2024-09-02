@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def cvd_female_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2, b_migraine, b_ra, b_renal, b_semi, b_sle, b_treatedhyp, b_type1, b_type2, bmi, ethrisk, fh_cvd, rati, sbp, sbps5, smoke_cat, surv, town,alc,active):
     survivor = np.array([
         0,

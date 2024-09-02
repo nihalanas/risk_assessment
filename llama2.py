@@ -6,6 +6,7 @@ def gen_response(message1):
         messages=[{'role': 'user', 'content': message1}],   # Sends the user's message to the model.     
         stream=True,
     )
+    
     response= ""     # This empty string accumulates response.
     for chunk in stream:
         response += chunk['message']['content']    # Appends each chunk to response string.

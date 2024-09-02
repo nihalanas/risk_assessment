@@ -61,7 +61,9 @@ def models_demo(input_data):
         answer = input_data[key]  # Gets the user input for each question.
         func(inputLst, answer)  # Processes the input and appends it to the list.
 
+
     inputLst = np.array(inputLst, dtype=float).reshape(1, -1)  # Converts list to NumPy array and reshape for model input.
+
 
     # Load pre-trained models from pickle files
     with open("model_lr.pkl", 'rb') as f:

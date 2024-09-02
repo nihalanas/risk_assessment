@@ -3,6 +3,7 @@ from cvdmodel import calculate_cvd_score, calculate_healthy_cvd_score, calculate
 from llama2 import gen_response
 from diabetes import models_demo
 
+
 def generate_template(user_data, risk_score, healthy_score, relative_risk):
     message = f"Hi, I'm {user_data['name']}, a {user_data['gender']} aged {user_data['age']} with the following health information:\n"
     message += f"- Atypical Antipsychotic Use: {user_data.get('b_atypicalantipsy', 'Unknown')}\n"
