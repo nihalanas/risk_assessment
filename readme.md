@@ -34,7 +34,7 @@ git bash terminal using the command:-
    ```
 ___
 
-<!-- > [!IMPORTANT]
+<!-- [!IMPORTANT] -->
 
 ___
 
