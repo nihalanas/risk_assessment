@@ -1,4 +1,4 @@
-<img align="center" alt="Coding" width="100%" height='300px' src="NeXuS.png">
+<!-- <img align="center" alt="Coding" width="100%" height='300px' src=""> -->
 
 ___
 ## Introduction
@@ -34,9 +34,7 @@ git bash terminal using the command:-
    ```
 ___
 
-> [!IMPORTANT]  
-> Since we are using models from huggingFace and calling it using Inference API (serverless) method you should have a huggingface account and api_key, 
-> This api key must be placed in [apicall.py](https://github.com/umerfar123/um-Answer_Paper_Evaluation_System/blob/main/apicall.py) file.
+<!-- > [!IMPORTANT]
 
 ___
 
