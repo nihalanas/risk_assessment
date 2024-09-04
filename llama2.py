@@ -10,5 +10,5 @@ def gen_response(message1):
     response= ""     # This empty string accumulates response.
     for chunk in stream:
         response += chunk['message']['content']    # Appends each chunk to response string.
-    print("this is the output from llama2 file", response)
+    print("THIS IS THE OUTPUT FROM LLAMA2 FILE:- ", response)
     return response
