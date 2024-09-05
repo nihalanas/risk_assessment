@@ -39,10 +39,10 @@ ___
 1. Download the ZIP file, unzip it, and open the resulting folder in your preferred IDE, such as Visual Studio Code or you can also clone the repository by copying the web url and pasting it in your directory's
 git bash terminal using the command:-
    ```bash
-   git clone https://github.com/nihalanas/cvd_last.git
+   git clone https://github.com/nihalanas/risk_assessment.git
    ```
 
-2. Install the libraries mentioned in [requirements.txt](https://github.com/nihalanas/cvd_last/blob/main/requirements.txt)
+2. Install the libraries mentioned in [requirements.txt](https://github.com/nihalanas/risk_assessment/blob/main/requirements.txt)
 
    In VS Code Terminal run the following command:
    
@@ -56,12 +56,12 @@ ___
 ___
 
 > [!NOTE]
-> Others models can also be run, the available models can be selected from the Ollama application and the name can be updated in the 'model' field in this [file](https://github.com/nihalanas/cvd_last/blob/main/llama2.py)
+> Others models can also be run, the available models can be selected from the Ollama application and the name can be updated in the 'model' field in this [file](https://github.com/nihalanas/risk_assessment/blob/main/llama2.py)
 
 ___
 
  
-4. Run the [app.py](https://github.com/nihalanas/cvd_last/blob/main/app.py) python file.
+4. Run the [app.py](https://github.com/nihalanas/risk_assessment/blob/main/app.py) python file.
 
    ```python
    Streamlit run app.py
