@@ -16,6 +16,23 @@ ___
 > If you don't already have it installed, you can get it downloaded from [here](https://ollama.com/download)
 
 ___
+## SYSTEM REQUIREMENTS
+
+Minimum System Requirements
+
+- Processor: Quad-core Intel/AMD processor or higher (i5 equivalent)
+- RAM: 8 GB
+- Storage: At least 10 GB of free space
+- Python Version: 3.8 or later
+
+Recommended System Requirements
+
+- Processor: 6-Core Intel/AMD processor (i7 equivalent or higher)
+- RAM: 16 GB or more
+- Storage: 20 GB or more of free space for models and dependencies
+- Python Version: 3.10 or later
+
+___
 
 ## Installation
 
@@ -49,14 +66,10 @@ ___
    ```python
    Streamlit run app.py
    ```
+
 ____
 
 5. Once the command is executed, the local URL where the streamlit application is running will be displayed in the VS Code terminal, navigate to the app by clicking on the link while having Ctrl on toggle.
-
-____
-
-> [!NOTE]
->Running a LLM in the background using OLLAMA is a resource intensive computation, make sure you have a system with at least 8GB RAM, 16GB will be recommended. 
 
 ____
 
@@ -65,4 +78,4 @@ ____
 ____
 
 > [!NOTE]
-> Depending on the system capabilites, the measures might take a few minutes to be generated. You can make sure it's working in the background by finding 'Running' action bar in the top right of the Streamlit application.
+> Running a LLM in the background using OLLAMA is a resource intensive computation, make sure you have a system with at least 8GB RAM, 16GB will be recommended. Depending on the system capabilites, the measures might take a few minutes to be generated. You can make sure it's working in the background by finding 'Running' action bar in the top right of the Streamlit application.
