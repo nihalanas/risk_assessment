@@ -66,13 +66,13 @@ def models_demo(input_data):
 
 
     # Load pre-trained models from pickle files
-    with open("model_lr.pkl", 'rb') as f:
+    with open("models\model_lr.pkl", 'rb') as f:
         model_lr = pickle.load(f)
 
-    with open("model_lin_svc.pkl", 'rb') as f:
+    with open("models\model_lin_svc.pkl", 'rb') as f:
         model_lin_svc = pickle.load(f)
 
-    with open("model_polyn_svc.pkl", 'rb') as f:
+    with open("models\model_polyn_svc.pkl", 'rb') as f:
         model_polyn_svc = pickle.load(f)
 
 

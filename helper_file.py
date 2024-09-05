@@ -1,5 +1,6 @@
 # Helper file with functions to be used in the main file
 
+
 def generate_template(user_data, risk_score, healthy_score, relative_risk):
     message = f"Hi, I'm {user_data['name']}, a {user_data['gender']} aged {user_data['age']} with the following health information:\n"
     message += f"- Atypical Antipsychotic Use: {user_data.get('b_atypicalantipsy', 'Unknown')}\n"

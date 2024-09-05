@@ -32,6 +32,7 @@ def cvd_female_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2
 		-0.1712705688324178400000000])
     Ismoke = np.array([0, 0.13386833786546262, 0.56200858012438537, 0.66749593377502547, 0.84948177644830847])
 
+
     # Applying the fractional polynomial transforms (which includes scaling)
     dage = age
     dage = dage / 10
@@ -41,6 +42,7 @@ def cvd_female_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2
     dbmi = dbmi / 10
     bmi_1 = dbmi**(-2)
     bmi_2 = dbmi**(-2) * np.log(dbmi)
+
 
     # Centring the continuous variables
     age_1 = age_1 - 0.053274843841791
@@ -59,6 +61,7 @@ def cvd_female_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2
     a += Iethrisk[int(ethrisk)]
     a += Ismoke[smoke_cat]
 
+
     # Sum from continuous values
     a += age_1 * -8.1388109247726188
     a += age_2 * 0.79733376689699098
@@ -68,6 +71,7 @@ def cvd_female_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2
     a += sbp * 0.013131488407103424
     a += sbps5 * 0.0078894541014586095
     a += town * 0.077223790588590108
+
 
     # Sum from boolean values
     a += b_AF * 1.5923354969269663
@@ -84,6 +88,7 @@ def cvd_female_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2
     a += fh_cvd * 0.45445319020896213
     a += alc * -0.3414022397177681
     a += active * -0.2542591239285872
+    
     # Sum from interaction terms
     a += age_1 * (smoke_cat == 1) * -4.7057161785851891
     a += age_1 * (smoke_cat == 2) * -2.7430383403573337
@@ -128,6 +133,7 @@ def cvd_female_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2
 
 def cvd_male_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2, b_migraine, b_ra, b_renal, b_semi,
                  b_sle, b_treatedhyp, b_type1, b_type2, bmi, ethrisk, fh_cvd, rati, sbp, sbps5, smoke_cat, surv, town,alc,active):
+    
     # The conditional arrays
     survivor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.977268040180206, 0, 0, 0, 0, 0]
 
@@ -201,8 +207,8 @@ def cvd_male_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2, 
     a += fh_cvd * 0.5405546900939015600000000
     a += alc * -0.08484090780460245
     a += active * -0.2542591239285872
+    
     # Sum from interaction terms
-
     a += age_1 * (smoke_cat == 1) * -0.2101113393351634600000000
     a += age_1 * (smoke_cat == 2) * 0.7526867644750319100000000
     a += age_1 * (smoke_cat == 3) * 0.9931588755640579100000000
@@ -242,32 +248,6 @@ def cvd_male_raw(age, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2, 
     score = 100.0 * (1 - np.power(survivor[int(surv)], np.exp(a)))
 
     return score
-
-
-
-#Example input values (replace these with your actual values)
-age = 60
-gender = 'male'  # or 'female'
-b_AF = 0
-b_atypicalantipsy = 0
-b_corticosteroids = 0
-b_impotence2 = 0
-b_migraine = 1
-b_ra = 0
-b_renal = 0
-b_semi = 0
-b_sle = 0
-b_treatedhyp = 0
-b_type1 = 1
-b_type2 = 0
-bmi = 25
-fh_cvd = 1
-rati = 4
-sbp = 181
-sbps5 = 0
-smoke_cat = 0
-alc=0
-active=1
 
 
 def calculate_cvd_score(age, gender, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2, b_migraine, b_ra, b_renal, b_semi,
@@ -325,17 +305,17 @@ def calculate_healthy_cvd_score(age, gender, ethrisk=2):
 def calculate_relative_risk(user_score, healthy_score):
     return user_score / healthy_score
 
-# Call the function to get the user's CVD risk score
-user_result = calculate_cvd_score(age, gender, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2, b_migraine, b_ra, b_renal, b_semi, b_sle, b_treatedhyp, b_type1, b_type2, bmi, fh_cvd, rati, sbp, sbps5, smoke_cat,active,alc)
-print("CVD Score:", user_result)
+# # Call the function to get the user's CVD risk score
+# user_result = calculate_cvd_score(age, gender, b_AF, b_atypicalantipsy, b_corticosteroids, b_impotence2, b_migraine, b_ra, b_renal, b_semi, b_sle, b_treatedhyp, b_type1, b_type2, bmi, fh_cvd, rati, sbp, sbps5, smoke_cat,active,alc)
+# print("CVD Score:", user_result)
 
-# Assuming you have a function to calculate the healthy CVD score
-healthy_result = calculate_healthy_cvd_score(age, gender, ethrisk=2)
-print("Healthy Score:", healthy_result)
+# # Assuming you have a function to calculate the healthy CVD score
+# healthy_result = calculate_healthy_cvd_score(age, gender, ethrisk=2)
+# print("Healthy Score:", healthy_result)
 
-# Calculate and print the relative risk
-relative_risk = calculate_relative_risk(user_result, healthy_result)
-print("Relative Risk:", relative_risk)
+# # Calculate and print the relative risk
+# relative_risk = calculate_relative_risk(user_result, healthy_result)
+# print("Relative Risk:", relative_risk)
 
 def calculate_healthy_cvd_score(age, gender, ethrisk=2):
     # Default values for clinical indicators for a healthy person
@@ -357,7 +337,6 @@ def calculate_healthy_cvd_score(age, gender, ethrisk=2):
         'surv': 10,  # Assuming 10-year survival rate for a healthy person
         'town': 0,  # Assuming default town value for simplicity
         'sbps5': 0,
-        'ethrisk': 2,
         'alc':0,
         'active':0
     }

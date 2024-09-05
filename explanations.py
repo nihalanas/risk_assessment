@@ -1,5 +1,6 @@
 # File with explanations for the different terms.
 
+
 def cvd_explanation():
     return """
     - **Atrial Fibrillation (AF):** Irregular heart rhythm that can lead to blood clots, stroke, and heart failure.
@@ -23,6 +24,7 @@ def cvd_explanation():
     - **Alcohol Consumption:** Amount of alcohol consumed, which can affect heart health depending on the quantity and frequency of consumption.
     - **Physical Activity Level:** Level of exercise, with higher activity levels associated with lower risk of heart disease and better overall health.
     """
+    
     
 def diabetes_explanation():
     return """
