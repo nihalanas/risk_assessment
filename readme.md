@@ -16,7 +16,7 @@ ___
 > If you don't already have it installed, you can get it downloaded from [here](https://ollama.com/download)
 
 ___
-## SYSTEM REQUIREMENTS
+## System Requirements
 
 Minimum System Requirements
 
