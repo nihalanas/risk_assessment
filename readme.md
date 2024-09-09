@@ -1,4 +1,4 @@
-# Cardiovascular Disease and Diabetes Risk Assessment Tool
+# Cardiovascular Disease & Diabetes Risk Assessment Tool
 
 ## Introduction
 
@@ -45,7 +45,7 @@ Recommended System Requirements:
    pip install -r requirements.txt
    ```
 
-3. Download and install OLLAMA from [here](https://ollama.com/download).
+3. Download and install OLLAMA from [here](https://ollama.com/download). Select the model that you want to run in the background. (By default, it is set to `llama2`)
 
 ## Usage
 
